@@ -372,7 +372,7 @@ var compare = function(a,b){
 				document.getElementById('guessesLeft').innerHTML = ("Guesses Left: " + gLeft);
 				document.getElementById('guessSoFar').innerHTML = ("Your Guesses So Far: " + picked);
 				
-			}else{
+			}else if (b === ("C" || "c")){
 				picked.push("A");
 				gLeft --;
 				document.getElementById('guessesLeft').innerHTML = ("Guesses Left: " + gLeft);
@@ -447,14 +447,7 @@ var compare = function(a,b){
 			}
 		}else{
 			 
-			win ++;
-			console.log(win);
-			document.getElementById('wins').innerHTML = ("Wins: " + win);
-			gLeft = 3;
-			document.getElementById('guessesLeft').innerHTML = ("Guesses Left: " + gLeft);
-			picked.pop();
-			document.getElementById('guessSoFar').innerHTML = ("Your Guesses So Far: " + picked);
-			reset();
+			console.log("Null Key");
 		}
 		
 }		
